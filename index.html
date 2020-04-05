@@ -1,0 +1,190 @@
+<!-- 
+CENTRO UNIVERSITÁRIO UNIEURO
+FELIPE GUILHERME
+CPD: 40366 
+-->
+<!-- -------------------------------------------EXERCÍCIO 01------------------------------------------------>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body id="app">
+    <div id="ap">
+        <button class="botaovermelho">VERMELHO</button>
+        <button class="botaoverde">VERDE</button>
+        <button class="botaoazul">AZUL</button>
+        <button class="botaoamarelo">AMARELO</button>
+
+    </div>
+    <script> 
+        var btnElement1 = document.querySelector('button.botaovermelho');
+        var btnElement2 = document.querySelector('button.botaoverde');
+        var btnElement3 = document.querySelector('button.botaoazul');
+        var btnElement4 = document.querySelector('button.botaoamarelo');
+
+        btnElement1.onclick = function(){
+            app.style.backgroundColor = "#FF0000";
+        }
+        btnElement2.onclick = function(){
+            app.style.backgroundColor = "#00FF7F";
+        }
+        btnElement3.onclick = function(){
+            app.style.backgroundColor = "#00CED1";
+        }
+        btnElement4.onclick = function(){
+            app.style.backgroundColor = "#FFFF00";
+        }
+    </script>
+</body>
+</html> -->
+<!-- ----------------------------------------------FIM------------------------------------------------------>
+
+<!-- -------------------------------------------EXERCÍCIO 02------------------------------------------------>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body id="app">
+    <div>
+        <a href="#" onmousemove="mudarparaVermelho ();">VERMELHO</a><br><br>
+        <a href="#" onmousemove="mudarparaVerde ();">VERDE</a><br><br>
+        <a href="#" onmousemove="mudarparaAzul ();">AZUL</a><br><br>
+        <a href="#" onmousemove="mudarparaAmarelo ();">AMARELO</a><br><br>
+    </div>
+    <script>
+        function mudarparaVermelho(){
+            app.style.backgroundColor = "#FF0000";
+        }
+        function mudarparaVerde(){
+            app.style.backgroundColor = "#00FF7F";
+        }
+        function mudarparaAzul(){
+            app.style.backgroundColor = "#00CED1";
+        }
+        function mudarparaAmarelo(){
+            app.style.backgroundColor = "#FFFF00";
+        }
+    </script>
+</body>
+</html> -->
+<!-- ----------------------------------------------FIM------------------------------------------------------>
+<!-- -------------------------------------------EXERCÍCIO 03------------------------------------------------>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body id="app"> 
+    <h2>LISTA</h2>
+    <ul>
+        <li  onclick="mudarparaVermelho ();">VERMELHO</li>
+        <li  onclick="mudarparaVerde ();">VERDE</li>
+        <li  onclick="mudarparaAzul ();">AZUL</li>
+        <li  onclick="mudarparaAmarelo ();">AMARELO</li>
+    </ul>
+    
+    <script>
+        function mudarparaVermelho(){
+            app.style.backgroundColor = "#FF0000";
+        }
+        function mudarparaVerde(){
+            app.style.backgroundColor = "#00FF7F";
+        }
+        function mudarparaAzul(){
+            app.style.backgroundColor = "#00CED1";
+        }
+        function mudarparaAmarelo(){
+            app.style.backgroundColor = "#FFFF00";
+        }
+    </script>
+</body>
+</html> -->
+<!-- ----------------------------------------------FIM------------------------------------------------------>
+<!-- -------------------------------------------EXERCÍCIO 04------------------------------------------------>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button class="botao" onclick="mudar();">Ocultar Poema</button>
+        <p id="p">O poeta é um fingidor.
+            Finge tão completamente
+            Que chega a fingir que é dor
+            A dor que deveras sente.</p>
+    </div>
+<script>
+    var pElement = document.getElementById('p');
+    var btnElement = document.querySelector('button.botao');
+
+    btnElement.onclick = function(){
+        var display = pElement.style.display;
+        if(display == "none")
+            pElement.style.display = 'block';
+        else
+            pElement.style.display = 'none';
+    }
+</script>
+</body>
+</html> -->
+<!-- ----------------------------------------------FIM------------------------------------------------------>
+<!-- -------------------------------------------EXERCÍCIO 05------------------------------------------------>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validacação de Campos</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <script language="javascript" type="text/javascript" src="validacoes.js"></script>
+</head>
+    <body>
+        <form method="post" action="#" name="form" >
+        <fieldset>
+            <legend>Novo Usuário </legend>
+            
+            <label for="name">Login:</label><br>
+            <input type="text" name="txtnome" id="nome" size="50" maxlength="200"/><br>
+
+            <label for="senha">Senha:</label><br>
+            <input type="password" id="senha" name="txtsenha"/><br>
+
+            <label for="senha2">Confirmar Senha:</label><br>
+            <input type="password" id="senha2" name="txtsenha2"/><br><br>
+            <button class="botao">Submeter</button>
+        </fieldset>
+
+        <script>
+        var txtElement = document.getElementById('nome');
+        var senha1Element = document.getElementById('senha');
+        var senha2Element = document.getElementById('senha2');
+        var btnElement = document.querySelector('button.botao');
+
+        btnElement.onclick = function(){
+            if(txtElement.value == ""){
+                alert('Preencha o nome');
+            }else if(senha1Element == ""){
+                alert('preencha o campo Senha');
+            }else if(senha2Element == ""){
+                alert('preencha o campo Confirmar Senha');
+            }else if(senha1Element.value != senha2Element.value){
+             alert('Senhas não coincidem');
+            }else if(senha1Element.value < 6 ){
+                alert('A senha deve ter entre 6 e 10 caracteres');
+            }else if(senha1Element.value > 10){
+                alert('A senha deve ter entre 6 e 10 caracteres');
+            }else{
+                alert('Salvo com sucesso!');
+            }
+         }        
+        </script>
+
+    </body>
+</html> -->
+<!-- ----------------------------------------------FIM------------------------------------------------------>
